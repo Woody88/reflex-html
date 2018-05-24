@@ -11,9 +11,10 @@ This example is taken directly from reflex-dom-inbits tutorial.
 ```
 mainEntry :: MonadWidget t m => m ()
 mainEntry = do
-    rec
-        dynBool <- toggle False evClick
-        let dynAttrs = attrs <$> dynBool
+    dynBool <- toggle False evClick
+    let dynAttrs = attrs <$> dynBool
+
+    header_ [id_ "my-header", class_ "header-class"] $ mdo
         h1' dynAttrs $ text "Changing Color"
         (el,_) <- button_ [] $ text "Click Me"
         let evClick = domEvent Click el
@@ -21,7 +22,7 @@ mainEntry = do
     blank
 
 attrs :: Bool -> [Attribute]
-attrs b = [A.style_ dynColor]
+attrs b = [class_ "ui-kit-flex" style_ dynColor]
     where color True = "red"
           color _    = "green"
           dynColor   = "color: " <> color b
