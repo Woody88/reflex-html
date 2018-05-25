@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
-module Html where
+module Reflex.Html where
 
 import Data.Text      (Text)
 import Data.Monoid    ((<>))

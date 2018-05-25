@@ -16,8 +16,8 @@ extra-source-files:  ChangeLog.md
 cabal-version:       >=1.10
 
 library
-  exposed-modules:  Html 
-                  , Html.Attribute
+  exposed-modules:  Reflex.Html 
+                  , Reflex.Html.Attribute
   -- other-modules:
   -- other-extensions:
   build-depends:       base >=4.9 && <4.11

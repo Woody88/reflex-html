@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Html.Attribute where
+module Reflex.Html.Attribute where
 
 import Data.Text
 import Data.Map          as M
