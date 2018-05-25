@@ -6,7 +6,7 @@ import Data.Text      (Text)
 import Data.Monoid    ((<>))
 import Data.Map                  as M
 import Reflex.Dom 
-import Html.Attribute (Attribute)
+import Reflex.Html.Attribute (Attribute)
 
 
 a_ :: forall t m a. MonadWidget t m => [Attribute] -> m a -> m (Element EventResult (DomBuilderSpace m) t, a)
